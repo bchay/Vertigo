@@ -1,0 +1,42 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(./../images/background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 1.2em;
+}
+
+#titleImage {
+	width: 40%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+main {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	background: white;
+	padding-top: 10%;
+	border: 2px solid black;
+	height: auto;
+	min-height: 100%;
+	overflow: visible;
+
+	p {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 470px) {
+	#titleImage {
+		margin-top: 10%;
+	}
+}

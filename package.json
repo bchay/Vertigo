@@ -1,0 +1,16 @@
+{
+  "name": "grunt-test",
+  "version": "0.1.0",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-pug": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-postcss": "latest"
+  }
+}

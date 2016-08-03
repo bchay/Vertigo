@@ -1,0 +1,10 @@
+nav
+	ul#headerUl
+		img#vertigo-text(src = "./../images/vertigo-text.svg")
+		input#hamburger(type = "checkbox")
+		label#hamburgerLabel(for = "hamburger")
+			span#hamburgerSpan
+		li(class = title === "index" ? "active" : ""): a(href = "./index.html") Home
+		li(class = title === "outreach" ? "active" : ""): a(href = "./outreach.html") Outreach
+		li(class = title === "about" ? "active" : ""): a(href = "./about.html") About
+		li(class = title === "sponsors" ? "active" : ""): a(href = "./sponsors.html") Sponsors
