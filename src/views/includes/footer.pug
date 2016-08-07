@@ -1,3 +1,6 @@
 footer
-	img(src = "./../images/screw.svg")
+	if env == "development"
+		img(src = "./../images/screw.svg")
+	else
+		img(src = "./images/screw.svg")
 	p Copyright &copy; 2016

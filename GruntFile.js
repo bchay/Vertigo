@@ -62,14 +62,33 @@ module.exports = function(grunt) {
     },
 
     pug: {
-      build: {
+      development: {
         files: [{
           expand: true,
           cwd: 'src/views',
           src: ['*.pug'],
           dest: 'build/views',
           ext: '.html'
-        }]
+        }],
+        options: {
+          data: {
+            env: 'development'
+          }
+        }
+      },
+      production: {
+        files: [{
+          expand: true,
+          cwd: 'src/views',
+          src: ['*.pug'],
+          dest: 'build',
+          ext: '.html'
+        }],
+        options: {
+          data: {
+            env: 'production'
+          }
+        }
       }
     },
 
@@ -108,7 +127,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:build', 'imagemin']);
-  grunt.registerTask('update-stylesheets', ['clean:sheets', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets']);
-  grunt.registerTask('update-pug', ['clean:pug', 'pug:build']);
+  grunt.registerTask('default', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin']);
+  grunt.registerTask('production', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:production', 'imagemin']);
+  grunt.registerTask('development', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin']);
 };

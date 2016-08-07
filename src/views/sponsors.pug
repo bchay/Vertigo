@@ -3,10 +3,16 @@ html
 	head
 		title Sponsors
 		include ./includes/head.pug
-		link(rel = "stylesheet" href = "./../stylesheets/sponsors.min.css" )
+		if env == "development"
+			link(rel = "stylesheet" href = "./../stylesheets/sponsors.min.css" )
+		else
+			link(rel = "stylesheet" href = "./stylesheets/sponsors.min.css" )
 		-var title = "sponsors";
 	body
 		include ./includes/header.pug
 		main#mainContent
-			img#titleImage(src = "./../images/sponsors-text.svg")
+			if env == "development"
+				img#titleImage(src = "./../images/sponsors-text.svg")
+			else
+				img#titleImage(src = "./images/sponsors-text.svg")
 		include ./includes/footer.pug

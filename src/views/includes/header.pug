@@ -1,6 +1,9 @@
 nav
 	ul#headerUl
-		img#vertigo-text(src = "./../images/vertigo-text.svg")
+		if env == "development"
+			img#vertigo-text(src = "./../images/vertigo-text.svg")
+		else
+			img#vertigo-text(src = "./images/vertigo-text.svg")
 		input#hamburger(type = "checkbox")
 		label#hamburgerLabel(for = "hamburger")
 			span#hamburgerSpan

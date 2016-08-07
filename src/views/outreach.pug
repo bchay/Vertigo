@@ -3,12 +3,18 @@ html
 	head
 		title Outreach
 		include ./includes/head.pug
-		link(rel = "stylesheet" href = "./../stylesheets/outreach.min.css" )
+		if env == "development"
+			link(rel = "stylesheet" href = "./../stylesheets/outreach.min.css" )
+		else
+			link(rel = "stylesheet" href = "./stylesheets/outreach.min.css" )
 		-var title = "outreach";
 	body
 		include ./includes/header.pug
 		main#mainContent
-			img#titleImage(src = "./../images/outreach-text.svg")
+			if env == "development"
+				img#titleImage(src = "./../images/outreach-text.svg")
+			else
+				img#titleImage(src = "./images/outreach-text.svg")
 
 			h2 Volunteered at Illinois State Championship
 			p.

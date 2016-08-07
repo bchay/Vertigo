@@ -3,12 +3,19 @@ html
 	head
 		title About 6287
 		include ./includes/head.pug
-		link(rel = "stylesheet" href = "./../stylesheets/about.min.css" )
+		if env == "development"
+			link(rel = "stylesheet" href = "./../stylesheets/about.min.css" )
+		else
+			link(rel = "stylesheet" href = "./stylesheets/about.min.css" )
 		-var title = "about";
 	body
 		include ./includes/header.pug
 		main#mainContent
-			img#titleImage(src = "./../images/about-team.svg")
+			if env == "development"
+				img#titleImage(src = "./../images/about-team.svg")
+			else
+				img#titleImage(src = "./images/about-team.svg")
+
 			h2 Brendan Chay
 			p.
 				Brendan Chay is the founder, co-captain, and lead programmer of Vertigo. He is currently a junior at Highland Park High School, and is participating in his third season of FTC. He loves programming, and is most proficient in Java, Javascript, and NodeJS. Brendan enjoys volunteering for FTC events, and has worked as a Software Inspector, CSA, FTAA, and Field Inspector.
