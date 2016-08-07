@@ -1,5 +1,5 @@
 {
-  "name": "grunt-test",
+  "name": "Vertigo",
   "version": "0.1.0",
   "devDependencies": {
     "autoprefixer": "latest",
