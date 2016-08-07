@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title 404 Page Not Found
+		include ./includes/head.pug
+		link(rel = "stylesheet" href = "./../stylesheets/404.min.css")
+	body
+		include ./includes/header.pug
+		main
+			img#titleImage(src = "./../images/vertigo-logo.svg")
+			p.
+				The page you requested cannot be found.
+		include ./includes/footer.pug
