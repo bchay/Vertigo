@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         src: ['build/**/*.*', '!build/stylesheets/bootstrap/**/*.*']
       },
       stylesheets: { //Removes all .css files, not minified versions
-        src: ['build/stylesheets/*.css', '!build/stylesheets/*.min.css', '!build/stylesheets/bootstrap/**/*.*']
+        src: ['build/stylesheets/*.css', '!build/stylesheets/*.min.css']
       },
       images: {
         src: ['build/images/*.*']
@@ -15,8 +15,8 @@ module.exports = function(grunt) {
       pug: {
         src: ['build/views/**/*.pug']
       },
-      sheets: { //Removes all .css, .min.css, not bootstrap
-        src: ['build/stylesheets/*.css', '!build/stylesheets/bootstrap/**/*.*']
+      sheets: {
+        src: ['build/stylesheets/*.css']
       }
     },
 

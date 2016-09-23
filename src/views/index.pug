@@ -1,7 +1,8 @@
 doctype html
 html
 	head
-		title Vertigo 6287
+		title Vertigo FTC Team 6287
+		meta(name = "description", content = "Welcome to the website of Vertigo, FTC robotics team 6287 from Highland Park, Illinois.")
 		include ./includes/head.pug
 		if env == "development"
 			link(rel = "stylesheet" href = "./../stylesheets/index.min.css")
@@ -16,5 +17,5 @@ html
 			else
 				img#titleImage(src = "./images/vertigo-logo.svg")
 			p.
-				Vertigo is a First Tech Challenge team affiliated with Highland Park High School in Illinois. Though the 2016-2017 season is the team's initial forray into FIRST, the team is comprised of both seasoned veterans as well as new faces.
+				Vertigo is a First Tech Challenge team affiliated with Highland Park High School in Illinois. It is part of the District 113 robotics program. Though the 2016-2017 season is the team's initial forray into FIRST, the team is comprised of both seasoned veterans as well as new faces.
 		include ./includes/footer.pug
