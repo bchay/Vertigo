@@ -15,3 +15,9 @@ footer img {
 	width: auto;
 	padding-right: 10px;
 }
+
+@media (min-height: 0px) and (max-height: 415px) {
+	footer p {
+		display: none;
+	}
+}

@@ -14,6 +14,19 @@ html
 		main#mainContent
 			if env == "development"
 				img#titleImage(src = "./../images/sponsors-text.svg")
+				br
+				img#baxterLogo.logo(src = "./../images/baxter-logo.png")
+				br
+				img#accurateLogo.logo(src = "./../images/accurate-logo.png")
+				br
+				img#rockspotLogo.logo(src = "./../images/rockspot-logo.jpeg")
 			else
-				img#titleImage(src = "./images/sponsors-text.svg")
+				img#titleImage.logo(src = "./images/sponsors-text.svg")
+				br
+				img#baxterLogo.lofo(src = "./images/baxter-logo.png")
+				br
+				img#accurateLogo.logo(src = "./images/accurate-logo.png")
+				br
+				img#rockspotLogo.logo(src = "./images/rockspot-logo.jpeg")
+				br
 		include ./includes/footer.pug

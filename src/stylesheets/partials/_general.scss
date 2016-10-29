@@ -22,7 +22,7 @@ main {
 	width: 80%;
 	display: block;
 	margin: 0 auto;
-	background: rgba(255, 255, 255, .6);
+	background: rgba(255, 255, 255, .75);
 	padding-top: 10%;
 	border: 2px solid black;
 	height: auto;
@@ -38,5 +38,15 @@ main {
 @media (min-width: 0px) and (max-width: 470px) {
 	#titleImage {
 		margin-top: 10%;
+	}
+
+	main {
+		width: 95%;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+	html, body {
+		background-attachment: scroll;
 	}
 }
