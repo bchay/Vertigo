@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       build: {
         src: ['build/**/*.*', '!build/stylesheets/bootstrap/**/*.*']
       },
-      stylesheets: { //Removes all .css files, not minified versions
+      stylesheets: { //Removes all unminified .css files
         src: ['build/stylesheets/*.css', '!build/stylesheets/*.min.css']
       },
       images: {
@@ -103,6 +103,16 @@ module.exports = function(grunt) {
       }
     },
 
+
+    copy: {
+      main: {
+          nonull: true,
+          expand: true,
+          src: '_headers',
+          dest: 'build/'
+      },
+    },
+
     watch: {
       stylesheets: {
         files: ['src/stylesheets/**/*.scss'],
@@ -126,8 +136,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin']);
-  grunt.registerTask('production', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:production', 'imagemin']);
-  grunt.registerTask('development', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin']);
+  grunt.registerTask('default', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin', 'copy']);
+  grunt.registerTask('production', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:production', 'imagemin', 'copy']);
+  grunt.registerTask('development', ['clean:build', 'sass', 'postcss:build', 'cssmin', 'clean:stylesheets', 'pug:development', 'imagemin', 'copy']);
 };
