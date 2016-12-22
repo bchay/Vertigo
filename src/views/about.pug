@@ -14,10 +14,10 @@ html
 		main#mainContent
 			if env == "development"
 				img#titleImage(src = "./../images/about-team.svg")
-				img#titleImage(src = "./../images/Full Team Photo - League Meet 1.jpg")
+				img.memberPhoto(src = "./../images/Full Team Photo - League Meet 1.jpg")
 			else
 				img#titleImage(src = "./images/about-team.svg")
-				img#titleImage(src = "./images/Full Team Photo - League Meet 1.jpg")
+				img.memberPhoto(src = "./images/Full Team Photo - League Meet 1.jpg")
 
 			h2 Adam Kramer
 			if env == "development"
