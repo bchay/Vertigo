@@ -3,11 +3,19 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background: url(./../images/background-2.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+	//background: url(./../images/background-2.jpg);
+	//background-size: cover;
+	//background-attachment: fixed;
 	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 1.2em;
+}
+
+html {
+	background: url(./../images/background-2.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #titleImage {
